@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+AngularJs Form 
+</title>
+<link rel="stylesheet" href="../Plug-in/bootstrap-5.1.0-dist/css/bootstrap.min.css">
+<script src="../Plug-in/angular-js/angularjs.min.js"></script>
+
+
+</head>
+<body ng-app="formApp" ng-controller="formCtrl">
+<h3>AngularJS Form </h3>
+<form ng-submit="sendForm()">
+    
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+
+<label for="name">Name</label>
+<input id="name" name="name" type="text"  class="form-control" ng-model="person.name" required >
+
+
+<div class="row">
+    <div class="col-sm-6">
+<label for="address">Address</label> 
+<input id="address" name="address" type="text" class="form-control" ng-model="person.address" required >
+</div>
+
+
+
+    <div class="col-sm-6">
+
+<label for="contact">Contact No</label>
+<input id="mobile" name="mobile" type="number" class="form-control" ng-model="person.mobile" required >
+</div>
+
+
+
+<div class="row">
+    <div class="col-sm-6">
+<label for="email">Email</label>
+<input id="email" name="email" type="email" ng-model="person.email" class="form-control" required >
+
+<div class="form-group">
+    <select class="custom-select" required>
+      <option value="">State</option>
+      <option value="1">TamilNadu</option>
+      <option value="2">Kerala</option>
+      <option value="3">Karnataka</option>
+    </select>
+    </div>
+
+</div>
+<div class="form-group text-center mb-2">
+<input type="checkbox" class="form-check-input" id="Terms Agreement">
+<label for="Terms Agreement" class="form-check-label"  > I agree with the terms and conditions </label>
+
+</div>
+
+
+<div class="form-group text-center">
+    
+    <button type="submit" class="btn btn-info" >Submit</button>
+
+</div>
+<br /><br />
+<span>{{msg}}</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</form>
+
+</body>
+<script src="../js/reg.js"></script>
+</html>
